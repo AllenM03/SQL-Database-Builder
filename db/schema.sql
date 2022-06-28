@@ -1,25 +1,35 @@
-DROP DATABASE IF EXISTS inventory_db;
-CREATE DATABASE inventory_db;
+DROP DATABASE IF EXISTS company_db;
+CREATE DATABASE company_db;
 
-USE inventory_db;
+USE company_db;
 
-CREATE TABLE Department(
-  id INTEGER NOT NULL,
-  book_name VARCHAR(30),
-  book_description TEXT,
-  category_name VARCHAR(30),
-  price DECIMAL(10,2),
-  in_stock BOOLEAN 
+CREATE TABLE department (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(30)
 );
 
-CREATE TABLE roles(
-  id INTEGER NOT NULL,
-  category_name VARCHAR(30),
-  category_description TEXT
+
+CREATE TABLE role (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(30),
+  salary DECIMAL(10,0),
+  department_id INT NOT NULL,
+
+  FOREIGN KEY (department_id)
+  REFERENCES department(id)
 );
 
-CREATE TABLE roles(
-  id INTEGER NOT NULL,
-  category_name VARCHAR(30),
-  category_description TEXT
+
+CREATE TABLE employee (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(30),
+  last_name VARCHAR(30),
+  role_id INT NOT NULL,
+  manager_id INT, 
+
+  FOREIGN KEY (role_id) 
+  REFERENCES role(id),
+
+  FOREIGN KEY (manager_id)
+  REFERENCES employee(id) 
 );
