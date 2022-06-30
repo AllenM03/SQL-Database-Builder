@@ -12,13 +12,6 @@ VALUES
   (9, 'Thurgood', 'Ali', 4, NULL),
   (10, 'Dezs', 'Walnuts', 2, 2);
 
-INSERT INTO departments (department_name)
-VALUES
-    ('Design'),
-    ('Marketing'),
-    ('Software Development'),
-    ('Sales'),
-    ('Accounting');
 
 INSERT INTO roles (job_title, salary, department_id)
 VALUES
@@ -32,3 +25,12 @@ VALUES
     ('Engineering Associate', 75000, 3),
     ('Accounting Clerk', 50000, 5),
     ('Design Analyst', 45000, 1);
+
+
+    INSERT INTO departments (department_name)
+VALUES
+    ('Design'),
+    ('Marketing'),
+    ('Software Development'),
+    ('Sales'),
+    ('Accounting');

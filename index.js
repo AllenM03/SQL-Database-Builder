@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const consTable = require('console.table');
 const db = require('./db/connection');
-
+import fetch from "node-fetch";
 
 ///////// Inquirer prompts questions to ask the user //////////
 const employeeTracker = () => {
