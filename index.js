@@ -2,7 +2,8 @@ const inquirer = require('inquirer');
 const cTable = require('console.table');
 const db = require('./db/connection');
 
-// Inquirer prompts questions to ask the user.
+
+///////// Inquirer prompts questions to ask the user //////////
 const employeeTracker = () => {
   inquirer
     .prompt([{
@@ -54,6 +55,7 @@ const employeeTracker = () => {
     });
 };
 
+
 ///////// Function displays department data ////////
     function viewDepartments() {
     const sql = `SELECT * FROM departments`;
@@ -69,6 +71,7 @@ const employeeTracker = () => {
     }
 
 
+
  /////// Displays roles data //////
     function viewRoles() {
     const sql = `SELECT * FROM roles`;
@@ -82,6 +85,7 @@ const employeeTracker = () => {
 
     })
     }
+
 
 /////// Displays employee data ///////
     function viewEmployee() {
@@ -137,6 +141,7 @@ function addRole() {
     } 
     )}
 
+
     /////// Function adds a department ///////
     function addDepartment() {
     inquirer
@@ -159,6 +164,7 @@ function addRole() {
         });
         });
     };
+
 
 //////// Function adds an employee ////////
     function addEmployee () {
@@ -200,7 +206,8 @@ function addRole() {
         });
 }
 
-/////// function for updating an employee's information ////////
+
+/////// Function for updating an employee's information ////////
 function updateEmployeeRole() {
   db.query('SELECT * FROM employee;' , function(err,data) {
     inquirer

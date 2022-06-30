@@ -1,4 +1,4 @@
--- Drop the database employee and create it again
-DROP DATABASE IF EXISTS employees;
-CREATE DATABASE employees;
-USE employees;
+-------- Deletes the employee database and creates it again --------
+DROP DATABASE IF EXISTS employee;
+CREATE DATABASE employee;
+USE employee;
