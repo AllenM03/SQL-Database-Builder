@@ -12,7 +12,7 @@ VALUES
   (9, 'Thurgood', 'Ali', 4, NULL),
   (10, 'Dezs', 'Walnuts', 2, 2);
 
-INSERT INTO department (department_name)
+INSERT INTO departments (department_name)
 VALUES
     ('Design'),
     ('Marketing'),
