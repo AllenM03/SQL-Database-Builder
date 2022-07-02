@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
-const consTable = require('console.table');
+const cTable = require('console.table');
 const db = require('./db/connection');
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 
 ///////// Inquirer prompts questions to ask the user //////////
 const employeeTracker = () => {
@@ -135,11 +135,11 @@ function addRole() {
             console.log("New role added");
             viewRoles();
           }
-            }
-        );
-        });
-    } 
-    )}
+        }
+      );
+    });
+  } 
+)}
 
 
     /////// Function adds a department ///////
@@ -162,8 +162,8 @@ function addRole() {
             }
             viewDepartments();
         });
-        });
-    };
+    });
+};
 
 
 //////// Function adds an employee ////////

@@ -1,4 +1,14 @@
 ------ Loads table with data -------
+
+INSERT INTO departments (department_name)
+VALUES
+    ('Design'),
+    ('Marketing'),
+    ('Software Development'),
+    ('Sales'),
+    ('Accounting');
+
+
 INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
 VALUES
   (1, 'Vivian', 'Walker', 1, NULL),
@@ -25,12 +35,3 @@ VALUES
     ('Engineering Associate', 75000, 3),
     ('Accounting Clerk', 50000, 5),
     ('Design Analyst', 45000, 1);
-
-
-    INSERT INTO departments (department_name)
-VALUES
-    ('Design'),
-    ('Marketing'),
-    ('Software Development'),
-    ('Sales'),
-    ('Accounting');
