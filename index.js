@@ -89,7 +89,7 @@ const employeeTracker = () => {
 
 /////// Displays employee data ///////
     function viewEmployee() {
-    const sql = `SELECT * FROM employee`;
+    const sql = `SELECT * FROM employees`;
     db.query(sql, (err, rows) => {
         if (err) {
         console.log(err);
@@ -195,7 +195,7 @@ function addRole() {
 
         ]).then(function (answer) {
         db.query(
-            `INSERT INTO employee (first_name, last_name, role_id, manager_id)
+            `INSERT INTO employees (first_name, last_name, role_id, manager_id)
             VALUES ("${answer.firstName}", "${answer.lastName}", "${answer.roleId}", "${answer.managerId}");`,
             function (err, data) {
             console.log("Employee added");
@@ -209,7 +209,7 @@ function addRole() {
 
 /////// Function for updating an employee's information ////////
 function updateEmployeeRole() {
-  db.query('SELECT * FROM employee;' , function(err,data) {
+  db.query('SELECT * FROM employees;' , function(err,data) {
     inquirer
     .prompt ([
         {
@@ -236,7 +236,7 @@ function updateEmployeeRole() {
 
     ]).then(function (answer) {
         const sql = 
-        `UPDATE employee
+        `UPDATE employees
         SET ${answer.details} = "${answer.newData}"
         WHERE id = ${answer.employee};`
         db.query(sql, function(err,data) {
