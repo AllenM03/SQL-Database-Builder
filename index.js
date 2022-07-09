@@ -21,7 +21,7 @@ const employeeTracker = () => {
       ]
     }])
 
-
+        ///// View /////
     .then((answers) => {
       switch (answers.menu) {
         case 'View all departments':
@@ -35,7 +35,7 @@ const employeeTracker = () => {
         case 'View all employees':
           viewEmployee();
           break;
-
+        ///// Add /////   
         case 'Add a department':
           addDepartment();
           break;
@@ -47,7 +47,7 @@ const employeeTracker = () => {
         case 'Add an employee':
           addEmployee();
           break;
-
+        ///// Update /////
         case 'Update an employee role':
           updateEmployeeRole();
           break;
